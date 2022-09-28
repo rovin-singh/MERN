@@ -4,7 +4,7 @@
 |   | **Core React** |
 |1  | [What is Module?](#what-is-module) |
 |2  | [What is Mongoose?](#what-is-mongoose) |
-
+|3  | [What is bind,call and apply?](#what-is-bind-call-and-apply) |
 ## Core React
     
 
@@ -20,6 +20,36 @@
 
     // Using ES6 imports
     import mongoose from 'mongoose';
+
+    ```
+   **[⬆ Back to Top](#table-of-contents)**
+
+3. ### What is bind,call and apply?
+
+    ```
+    Bind- bind method takes an object as a first argument and creates a new function.
+
+
+    const obj1={
+        name:"manish",
+        role:"admin"
+    }
+
+    const obj2={
+        name:"rabi",
+        role:"customer"
+    }
+
+    function printRoleandName(){
+        console.log(`He is ${this.role}. his name is ${this.name}`)
+    }
+        
+    const person1=printRoleandName.bind(obj1);
+    const person2=printRoleandName.bind(obj2);
+
+    person1();
+    person2();
+  
 
     ```
    **[⬆ Back to Top](#table-of-contents)**
