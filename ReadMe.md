@@ -28,7 +28,8 @@
 
     ```
     Bind- bind method takes an object as a first argument and creates a new function.
-
+  
+    Example: -
 
     const obj1={
         name:"manish",
@@ -50,6 +51,36 @@
     person1();
     person2();
   
+
+    Call:  
+    -  call method are predefined javaScript function.
+    -  Call invokes the function and allows you to pass in arguments  one by one.
+
+
+       const obj = {
+        name: "manish",
+        role: "admin",
+        charater: function (char) {
+            console.log(`He is ${this.name}. His role is ${this.role}. His character is ${char} `)
+         }
+       }
+
+       const person = {
+         name: "rabi",
+         role: "customer"
+      }
+
+      obj.charater.call(person,"honest");
+
+
+
+    Defference:
+    
+    call : binds the this value, invokes the function, and allows you to pass a list of arguments.
+
+    apply : binds the this value, invokes the function, and allows you to pass arguments as an array.
+    
+    bind : binds the this value, returns a new function, and allows you to pass in a list of arguments.
 
     ```
    **[⬆ Back to Top](#table-of-contents)**
