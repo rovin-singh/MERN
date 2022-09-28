@@ -4,7 +4,7 @@
 |   | **Core React** |
 |1  | [What is Module?](#what-is-module) |
 |2  | [What is Mongoose?](#what-is-mongoose) |
-|3  | [What is bind,call and apply?](#what-is-bind,-call-and-apply) |
+|3  | [What is bind call and apply?](#what-is-bind-call-and-apply) |
 ## Core React
     
 
@@ -24,7 +24,7 @@
     ```
    **[⬆ Back to Top](#table-of-contents)**
 
-3. ### What is bind,call and apply?
+3. ### What is bind call and apply?
 
     ```
     Bind- bind method takes an object as a first argument and creates a new function.
