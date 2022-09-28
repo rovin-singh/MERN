@@ -1,5 +1,20 @@
 <script>
+    // call method are predefined javaScript function.
+    // Call invokes the function and allows you to pass in arguments one by one.
 
+    const obj = {
+        name: "manish",
+        role: "admin",
+        charater: function (rating, char) {
+            console.log(`He is ${this.name}. His role is ${this.role}. His character is ${char}. his rating is ${rating}`)
+        }
+    }
 
+    const person = {
+        name: "rabi",
+        role: "customer"
+    }
+
+    obj.charater.apply(person, [5, "honest"]);
 
 </script>

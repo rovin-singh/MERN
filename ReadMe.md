@@ -1,86 +1,110 @@
 ### Table of Contents
-| No. | Questions |
-| --- | --------- |
-|   | **Core React** |
-|1  | [What is Module?](#what-is-module) |
-|2  | [What is Mongoose?](#what-is-mongoose) |
-|3  | [What is bind call and apply?](#what-is-bind-call-and-apply) |
+
+| No. | Questions                                                    |
+| --- | ------------------------------------------------------------ |
+|     | **Core React**                                               |
+| 1   | [What is Module?](#what-is-module)                           |
+| 2   | [What is Mongoose?](#what-is-mongoose)                       |
+| 3   | [What is bind call and apply?](#what-is-bind-call-and-apply) |
+
 ## Core React
-    
 
 1. ### What is Module?
-    A module in JavaScript is just a file containing related code. In JavaScript, we use the import and export keywords to share and receive functionalities
+
+   A module in JavaScript is just a file containing related code. In JavaScript, we use the import and export keywords to share and receive functionalities
    **[⬆ Back to Top](#table-of-contents)**
 
 2. ### What is Mongoose?
-    Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.  
-    ```
-    // Using Node.js `require()`
-    const mongoose = require('mongoose');
 
-    // Using ES6 imports
-    import mongoose from 'mongoose';
+   Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
 
-    ```
+   ```
+   // Using Node.js `require()`
+   const mongoose = require('mongoose');
+
+   // Using ES6 imports
+   import mongoose from 'mongoose';
+
+   ```
+
    **[⬆ Back to Top](#table-of-contents)**
 
 3. ### What is bind call and apply?
 
-    ```
-    Bind- bind method takes an object as a first argument and creates a new function.
-  
-    Example: -
+   ```
+   Bind- bind method takes an object as a first argument and creates a new function.
 
-    const obj1={
-        name:"manish",
-        role:"admin"
-    }
+   Example: -
 
-    const obj2={
-        name:"rabi",
-        role:"customer"
-    }
+   const obj1={
+       name:"manish",
+       role:"admin"
+   }
 
-    function printRoleandName(){
-        console.log(`He is ${this.role}. his name is ${this.name}`)
-    }
-        
-    const person1=printRoleandName.bind(obj1);
-    const person2=printRoleandName.bind(obj2);
+   const obj2={
+       name:"rabi",
+       role:"customer"
+   }
 
-    person1();
-    person2();
-  
+   function printRoleandName(){
+       console.log(`He is ${this.role}. his name is ${this.name}`)
+   }
 
-    Call:  
-    -  call method are predefined javaScript function.
-    -  Call invokes the function and allows you to pass in arguments  one by one.
+   const person1=printRoleandName.bind(obj1);
+   const person2=printRoleandName.bind(obj2);
+
+   person1();
+   person2();
 
 
-       const obj = {
-        name: "manish",
-        role: "admin",
-        charater: function (char) {
-            console.log(`He is ${this.name}. His role is ${this.role}. His character is ${char} `)
-         }
-       }
+   Call:
+   -  call method are predefined javaScript function.
+   -  Call invokes the function and allows you to pass in arguments  one by one.
 
-       const person = {
-         name: "rabi",
-         role: "customer"
+   Example:-
+
+     const obj = {
+       name: "manish",
+       role: "admin",
+       charater: function (char) {
+           console.log(`He is ${this.name}. His role is ${this.role}. His character is ${char} `)
+        }
       }
 
-      obj.charater.call(person,"honest");
+      const person = {
+        name: "rabi",
+        role: "customer"
+     }
 
+     obj.charater.call(person,"honest");
 
+   Apply: it is similar to call , besides it takes the arguments as an array.
 
-    Defference:
-    
-    call : binds the this value, invokes the function, and allows you to pass a list of arguments.
+   Example:
 
-    apply : binds the this value, invokes the function, and allows you to pass arguments as an array.
-    
-    bind : binds the this value, returns a new function, and allows you to pass in a list of arguments.
+       const obj = {
+       name: "manish",
+       role: "admin",
+       charater: function (rating, char) {
+           console.log(`He is ${this.name}. His role is ${this.role}. His character is ${char}. his rating is ${rating}`)
+        }
+     }
 
-    ```
+       const person = {
+           name: "rabi",
+           role: "customer"
+       }
+
+     obj.charater.apply(person, [5, "honest"]);
+
+   Defference:
+
+   call : binds the this value, invokes the function, and allows you to pass a list of arguments.
+
+   apply : binds the this value, invokes the function, and allows you to pass arguments as an array.
+
+   bind : binds the this value, returns a new function, and allows you to pass in a list of arguments.
+
+   ```
+
    **[⬆ Back to Top](#table-of-contents)**
