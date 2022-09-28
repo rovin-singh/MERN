@@ -6,6 +6,7 @@
 | 1   | [What is Module?](#what-is-module)                           |
 | 2   | [What is Mongoose?](#what-is-mongoose)                       |
 | 3   | [What is bind call and apply?](#what-is-bind-call-and-apply) |
+| 4   | [What is promise?](#what-is-promise) |
 
 ## Core React
 
@@ -107,4 +108,19 @@
 
    ```
 
+   **[⬆ Back to Top](#table-of-contents)**
+
+1. ### What is Promise?
+   The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+   ```
+        let promise = new Promise(function(resolve, reject) {
+        // executor (the producing code, "singer")
+        if(resolve){
+            console.log("Done!")
+        }
+        else{
+            console.log("Not Done");
+        }
+        });
+   ```
    **[⬆ Back to Top](#table-of-contents)**
