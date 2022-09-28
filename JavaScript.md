@@ -1,3 +1,6 @@
+## jAVASCRIPT:
+ The first ever JavaScript was created by Brendan Eich at Netscape, and has since been updated to conform to ECMA-262 Edition 5 and later versions.
+
 ### Table of Contents
 
 | No. | Questions                                                    |
@@ -110,7 +113,7 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
-1. ### What is Promise?
+4. ### What is Promise?
    The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
    ```
         let promise = new Promise(function(resolve, reject) {
